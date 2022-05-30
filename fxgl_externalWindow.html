@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <div class="topnav">
+      <link rel="stylesheet" href="menu.css">
+      <a class="active" href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Reset Phase</button>
+        <div class="dropdown-content">
+          <a href="week1.html">Week 1</a>
+          <a href="week2.html">Week 2</a>
+          <a href="week3.html">Week 3</a>
+          <a href="week4.html">Week 4</a>
+          <a href="pretotype.html">Pretotype</a>
+          <a href="Reset_Phase_Summary.html">Phase Summary</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Open Source</button>
+          <div class="dropdown-content">
+            <a href="OSupdate1.html">Update 1</a>
+            <a href="OSupdate2.html">Update 2</a>
+            <a href="csspreprocessors.html">CSS Preprocessors</a>
+            <a href="fxgl_externalWindow.html">JavaFXGL: External Windows</a>
+          </div>
+      </div>
+    </div>
+    <title>OS: JavaFXGL: External Windows</title>
+    <meta name="viewport" content="width=device=width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="-debug.css">
+    <link rel="stylesheet" href="article.css">
+    <style>
+
+      h1 {font: 700 2.0rem/1.2 "Roboto"; color:white; }
+      h2 {font: 400 1.5rem/1.2 "Roboto"; color:white; } 
+      time {font: 400 1.0rem/1.2 "Roboto"; color:hsl(0, 0%, 0%); margin-bottom: 3.9rem; }
+      h3 {font: 700 1.0rem/1.2 "Roboto"; margin-top: 2.4rem; color:hsl(0, 0%, 0%);  margin-bottom: 1.5rem;}
+      h4{font: 400 1.0rem/1.2 "Roboto"; color:hsl(250, 100%, 67%); margin-bottom: 1.4rem;}
+      p {font: 400 1.0rem/1.2 "Roboto"; color:hsl(000, 0%, 33%); margin-bottom: 1rem;}
+      ul,ol {font: 400 1.0rem/1.2 "Roboto"; color:hsl(000, 0%, 33%); padding-left: 1rem; margin:1rem}
+      #my-column{font: 400 1.0rem/1.2 "Roboto"; color:hsl(000, 0%, 33%); padding-left: 1rem; margin:1rem}
+      u {font: 400 1.0rem/1.2 "Roboto"; color:#04AA6D; margin-bottom: 1rem;}
+      img {margin-bottom: 1rem; padding-left: 4rem;}
+
+      @media (max-width: 8.5in) {:root {font-size: 18px;}}
+      @media (max-width: 5.0in) {:root {font-size: 18px;}}
+
+    
+    </style>
+  </head>
+  <body>
+    <article id="">
+      <h1>JavaFXGL: External Windows</h1>
+      <h2>By: Nadia Pintos Velasco</h2>
+      <time datetime="05-23-2022">May 30th, 2022 </time>
+      <h4>How do you run an external game window using JavaFXGL? </h4>
+      <p>FXGL (FX Game Library) is a game development library that uses Java FX as the graphics framework. The open-source project I chose uses maven to build the project. To access the FXGL library, the dependency needs to be added like this:  </p>
+      <img src = "fxgl1.png" width="500">
+      <p>Once you have this, to actually use FXGL you need to extend the class GameApplication and initialize your project according to your needs. However, some phases can be omitted for now. To only show an external window where your game will run you need to override the function initSettings in GameApplication. </p>
+      <p>initSettings is only called once in all the application’s lifetime. It will give you a default external window. But when you override it, you can indicate the settings you wish your window to have. For example, in my open-source project the initSettings function looks like this: </p>
+      <img src = "fxgl2.png" width="500" height="300">
+      <p>It overrides the old initSettings method and calls for the settings established in another class (DinosaurGUI), it also sets an app icon. Modifying these settings is done thanks to the GameApplication library from FXGL. </p>
+      <p>Now the window has the settings we want, but to run it we have to launch it. To do this the GameApplication library extends a method called launch where you create an instance of your game and the program runs with the arguments you pass to it. Once you run the program an external window will appear where you can see your game. </p>
+      <p>For example, my open-source project’s external game window looks like this: </p>
+      <img src = "fxgl3.png" width="500">
+      <p></p>
+    </article>
+    
+  </body>
+</html>

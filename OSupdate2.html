@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <div class="topnav">
+      <link rel="stylesheet" href="menu.css">
+      <a class="active" href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Reset Phase</button>
+        <div class="dropdown-content">
+          <a href="week1.html">Week 1</a>
+          <a href="week2.html">Week 2</a>
+          <a href="week3.html">Week 3</a>
+          <a href="week4.html">Week 4</a>
+          <a href="pretotype.html">Pretotype</a>
+          <a href="Reset_Phase_Summary.html">Phase Summary</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Open Source</button>
+          <div class="dropdown-content">
+            <a href="OSupdate1.html">Update 1</a>
+            <a href="OSupdate2.html">Update 2</a>
+            <a href="csspreprocessors.html">CSS Preprocessors</a>
+            <a href="fxgl_externalWindow.html">JavaFXGL: External Windows</a>
+          </div>
+      </div>
+    </div>
+    <title>OS: Update 2</title>
+    <meta name="viewport" content="width=device=width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="-debug.css">
+    <link rel="stylesheet" href="article.css">
+    <style>
+
+      h1 {font: 700 2.0rem/1.2 "Roboto"; color:white; }
+      h2 {font: 400 1.5rem/1.2 "Roboto"; color:white; } 
+      time {font: 400 1.0rem/1.2 "Roboto"; color:hsl(0, 0%, 0%); margin-bottom: 2.4rem; }
+      h3 {font: 700 1.0rem/1.2 "Roboto"; margin-top: 2.4rem; color:hsl(0, 0%, 0%);  margin-bottom: 1.5rem;}
+      h4{font: 400 1.0rem/1.2 "Roboto"; color:hsl(250, 100%, 67%); margin-bottom: 1.4rem;}
+      p {font: 400 1.0rem/1.2 "Roboto"; color:hsl(000, 0%, 33%); margin-bottom: 1rem;}
+      ul,ol {font: 400 1.0rem/1.2 "Roboto"; color:hsl(000, 0%, 33%); padding-left: 1rem; margin:1rem}
+      #my-column{font: 400 1.0rem/1.2 "Roboto"; color:hsl(000, 0%, 33%); padding-left: 1rem; margin:1rem}
+      u {font: 400 1.0rem/1.2 "Roboto"; color:#04AA6D; margin-bottom: 1rem;}
+
+      @media (max-width: 8.5in) {:root {font-size: 18px;}}
+      @media (max-width: 5.0in) {:root {font-size: 18px;}}
+
+    
+    </style>
+  </head>
+  <body>
+    <article id="os-update2">
+      <h1>Open Source Phase</h1>
+      <h2>Update 2</h2>
+      <time datetime="05-30-2022">May 30th, 2022 </time>
+      <h3>What I learned: May 24-30, 2022</h3>
+      <h4>Open Source Project</h4>
+      <p>This week I worked on another issue in the dinosaur exploder project. On this issue, I added a feature, whenever the spaceship receives damage the game screen will flash red for half a second to indicate damage. I learned a lot from this issue. The most important thing I believe I learned was to select the important parts of example code and adapt it to my own project. I was researching various libraries of java FX that I thought were going to be useful like Animation, ScaleTransition, SequentialTransition, etc. At the end, I didn’t use them because my issue could be resolved in a simpler manner.  </p>
+      <p>I learned more about lambda functions. I was having an issue where the parameters weren’t compatible, I realized the issue was that I was giving it a null value instead of a SequentialTransition. I didn’t use this function in my final answer but it helped me to understand a bit more of the syntaxis of lambda functions.  </p>
+      <p>I learned that the easiest way to affect the entire background for my project was to use the getGameScene() method and attach the red background to it. However, it took me a while to understand this because the examples I was seeing all created an animation first and ran it in an overlapped view of the screen.  </p>
+      <p>I tried following the examples but the entity to where I was attaching the animation was already being modified by another function in the program, and it’s why when I called the method runOnce() it wasn’t respecting the duration of which I assigned or when I was expecting the action to run. To solve this, I used the getGameScene() method and it changed the whole background and did it when it was expected.  </p>
+      <p>It took me a while to understand how the examples were using this method because I didn’t saw it declare anywhere and thought that I had to declare it in my project for it to work. But then I saw that with one of the libraries of the project I was able to call it and use it. Understanding where it came from and if I could use it in my project without declaring too many things was the biggest problem I had because the example I was looking at used a lot of functions and libraries that weren’t necessary in my project, and understanding each one to see if they could help me solve my issue was what took most of my time this week.  </p>
+      <p>This was good because I learned more about java, java fx and fxgl, but it took a lot of time to solve my issue so I think next time I'm looking at an example I should be more selective on what I spend my time researching about, and to really think if it could be of use for my project. </p>
+      <h4>How do CSS Preprocessors work?</h4>
+      <p>Also, this week, I learned the difference between preprocessors, compilers and transpilers. I looked into the node-sass code to understand how CSS preprocessors work. From the source code I was able to learn that the preprocessor looks at the differences between the extended CSS and adapts it to regular CSS. </p>
+      <p> To see my answer for this question click <a href="csspreprocessors.html"><u>here</u></a></p></p>
+      <h4>ANother questionnnnn</h4>
+      <p></p>
+    </article>
+    
+  </body>
+</html>

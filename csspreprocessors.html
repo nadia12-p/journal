@@ -20,7 +20,9 @@
         <button class="dropbtn">Open Source</button>
           <div class="dropdown-content">
             <a href="OSupdate1.html">Update 1</a>
+            <a href="OSupdate2.html">Update 2</a>
             <a href="csspreprocessors.html">CSS Preprocessors</a>
+            <a href="fxgl_externalWindow.html">JavaFXGL: External Windows</a>
           </div>
       </div>
     </div>
@@ -34,14 +36,14 @@
 
       h1 {font: 700 2.0rem/1.2 "Roboto"; color:white; }
       h2 {font: 400 1.5rem/1.2 "Roboto"; color:white; } 
-      time {font: 400 1.0rem/1.2 "Roboto"; color:hsl(0, 0%, 0%); margin-bottom: 2.4rem; }
+      time {font: 400 1.0rem/1.2 "Roboto"; color:hsl(0, 0%, 0%); margin-bottom: 3.9rem; }
       h3 {font: 700 1.0rem/1.2 "Roboto"; margin-top: 2.4rem; color:hsl(0, 0%, 0%);  margin-bottom: 1.5rem;}
       h4{font: 400 1.0rem/1.2 "Roboto"; color:hsl(250, 100%, 67%); margin-bottom: 1.4rem;}
       p {font: 400 1.0rem/1.2 "Roboto"; color:hsl(000, 0%, 33%); margin-bottom: 1rem;}
       ul,ol {font: 400 1.0rem/1.2 "Roboto"; color:hsl(000, 0%, 33%); padding-left: 1rem; margin:1rem}
       #my-column{font: 400 1.0rem/1.2 "Roboto"; color:hsl(000, 0%, 33%); padding-left: 1rem; margin:1rem}
       u {font: 400 1.0rem/1.2 "Roboto"; color:#04AA6D; margin-bottom: 1rem;}
-      img {margin-bottom: 1rem;}
+      img {margin-bottom: 1rem; padding-left: 1rem;}
 
       @media (max-width: 8.5in) {:root {font-size: 18px;}}
       @media (max-width: 5.0in) {:root {font-size: 18px;}}
@@ -52,16 +54,20 @@
   <body>
     <article id="home-page">
       <h1>How do CSS Preprocessors work?</h1>
-      <h2>Update 1</h2>
-      <time datetime="05-23-2022">May 23rd, 2022 </time>
-      <h4>Progress</h4>
+      <h2>By: Nadia Pintos Velasco</h2>
+      <time datetime="05-23-2022">May 30th, 2022 </time>
+      
       <p>CSS (Cascading Style Sheets) is a language that lets you style documents in markup languages like HTML. With different style sheets, the logical structure can produce different presentations. The best practice in web design is to separate the CSS into another stylesheet from your HTML document. CSS is the default language to use with markup languages. However, this language has its restrictions, the most notable one is the lack of variables. </p>
       <p>To extend the default capabilities of CSS we need to use scripting languages known as CSS preprocessors. They allow you to use logic in your CSS code, such as variables, nesting, inheritance, mixins, functions and mathematical operations. The first preprocessor created was Sass (Syntactically awesome style sheets). Sass is a language that’s compiled to CSS. You can extend the capabilities of CSS with it and then create a CSS that can be read by the main HTML document.  </p>
       <p>To be able to do this, the program needs to know that you want to translate from the preprocessor to a CSS file. You can indicate this action through a command or by running a script that tells the program that a conversion is needed. For example, here:  </p>
-      <img src = "scriptsass.png">
+      <img src = "scriptsass.png" width="650">
       <p>Our Sass script will look for all the files in our scss folder (where we are collecting our Sass files) and will output a folder that will keep our CSS files. Once the script is running, every time we make a change and save it it will be translated to CSS languages and we’ll be able to work in our Sass file with all the extended capabilities of CSS without worrying about translating it. This is possible because of compilers.  </p>
-      <p>A compiler is running behind the scenes and making this translation between two languages possible. I’m still researching more on compilers to be able to finish answering this question. </p>
-      
+      <p>A compiler is running behind the scenes and making this translation between two languages possible. A compiler turns the high-level source code that humans write into machine code so the computer knows the instructions it needs to follow. However, the logic behind preprocessors is different. They don’t transform the language we’re working with into a new one. Preprocessors only take in the language we’re working with and transform it to output the same language.  </p>
+      <p>For example, with Sass, we’re still using CSS but it’s an extended version. Which is why when we’re done and save our code a program is running behind the scenes spotting the differences between the extended code (Sass files) and the expected output (CSS). Meanwhile the differences are being spotted, the program writes a new file with the expected output language, in this case CSS.  </p>
+      <p>CSS preprocessors will look for all these differences, be it nesting, variables, etc., and adjust the syntaxis of the code to only CSS language. From here, we’ll have a CSS file that can be read without issue from an HTML document. The advantage is that because we’re coding with the Sass language or any other preprocessor, we can implement logic that we would have been restricted from using with only CSS. This way is also easier for the programmer to write code, without worrying about translating into another language, the preprocessors does it automatically. </p>
+      <h4></h4>
+      <h4></h4>
+      <h4></h4>
     </article>
     
   </body>
