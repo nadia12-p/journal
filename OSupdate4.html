@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <div class="topnav">
+        <link rel="stylesheet" href="menu.css">
+        <a class="active" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Reset Phase</button>
+          <div class="dropdown-content">
+            <a href="week1.html">Week 1</a>
+            <a href="week2.html">Week 2</a>
+            <a href="week3.html">Week 3</a>
+            <a href="week4.html">Week 4</a>
+            <a href="pretotype.html">Pretotype</a>
+            <a href="Reset_Phase_Summary.html">Phase Summary</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Open Source</button>
+            <div class="dropdown-content">
+              <a href="OSupdate1.html">Update 1</a>
+              <a href="OSupdate2.html">Update 2</a>
+              <a href="OSupdate3.html">Update 3</a>
+              <a href="OSupdate4.html">Update 4</a>
+              <a href="csspreprocessors.html">CSS Preprocessors</a>
+              <a href="fxgl_externalWindow.html">JavaFXGL: External Windows</a>
+            </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Building Something From Scratch</button>
+            <div class="dropdown-content">
+              <a href="BSFS_week1.html">Week 1</a>
+              <a href="BSFS_week2.html">Week 2</a>
+              <a href="BSFS_week3.html">Week 3</a>
+              <a href="BSFS_week4.html">Week 4</a>
+              <a href="BSFS_phase_learnings.html">Phase Learnings</a>
+            </div>
+      </div>
+      </div>
+    <title>OS: Update 4</title>
+    <meta name="viewport" content="width=device=width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="-debug.css">
+    <link rel="stylesheet" href="article.css">
+    <style>
+
+      h1 {font: 700 2.0rem/1.2 "Roboto"; color:white; }
+      h2 {font: 400 1.5rem/1.2 "Roboto"; color:white; } 
+      time {font: 400 1.0rem/1.2 "Roboto"; color:hsl(0, 0%, 0%); margin-bottom: 2.4rem; }
+      h3 {font: 700 1.0rem/1.2 "Roboto"; margin-top: 2.4rem; color:hsl(0, 0%, 0%);  margin-bottom: 1.5rem;}
+      h4{font: 400 1.0rem/1.2 "Roboto"; color:hsl(250, 100%, 67%); margin-bottom: 1.4rem;}
+      p {font: 400 1.0rem/1.2 "Roboto"; color:hsl(000, 0%, 33%); margin-bottom: 1rem;}
+      ul,ol {font: 400 1.0rem/1.2 "Roboto"; color:hsl(000, 0%, 33%); padding-left: 1rem; margin:1rem}
+      #my-column{font: 400 1.0rem/1.2 "Roboto"; color:hsl(000, 0%, 33%); padding-left: 1rem; margin:1rem}
+      u {font: 400 1.0rem/1.2 "Roboto"; color:#04AA6D; margin-bottom: 1rem;}
+
+      @media (max-width: 8.5in) {:root {font-size: 18px;}}
+      @media (max-width: 5.0in) {:root {font-size: 18px;}}
+
+    
+    </style>
+  </head>
+  <body>
+    <article id="os-update3">
+      <h1>Open Source Phase</h1>
+      <h2>Update 4</h2>
+      <time datetime="07-11-2022">July 11, 2022</time>
+      <h3>What I learned: July 5 - July 11, 2022 </h3>
+      <h4>First Issue</h4>
+      <p>This week I was able to finish one of the issues I started the previous week, the one where I redesign the <a href="https://github.com/dylan-power/dinosaur-exploder/issues/56"><u>pause menu</u></a>, you can look at my pull request <a href="https://github.com/dylan-power/dinosaur-exploder/pull/74"><u>here</u></a>. I struggled with this issue because at first, I didn’t understand how to access the pause menu to make the changes, but then I realized it came in the FXGL default methods so I overrode it and wrote my own pause menu. I think that helped me to understand better how we can work with and modify abstract classes in java.  </p>
+      <p></p>
+      <h4>Second Issue</h4>
+      <p>From the other issue that I started last week; I made a solution from scratch because I couldn’t find where the previous code was. However, during revision of the PR (which you can find <a href="https://github.com/deltachat/deltachat-desktop/pull/2821"><u>here</u></a>) I got the feedback necessary to switch my code to the proper file. I think this taught me that it is really important to have files named with an easily readable name.  </p>
+      <p>The file I was looking at was called rc.ts, which I'm assuming means ‘running commands’ but I didn’t know and from the description of the issue (which you can find <a href="https://github.com/deltachat/deltachat-desktop/issues/2582"><u>here</u></a>), I assumed there weren’t any flags or commands yet. So, I did my file and submitted the PR where I got more context on what they needed and how they wanted to implement it, and learn that some workarounds I did weren’t necessary.  </p>
+      <p>I made some changes with the feedback I received, now I had things clearer on how the project worked than with only the documentation, where I couldn’t find how they ran their cli. I’m hoping the changes I made were correct and my PR gets merged soon, if not I'll keep modifying the code until it’s merged. </p>
+      <p></p>
+      <h4>Third Issue</h4>
+      <p>For my third issue I worked on another issue of the Dinosaur Exploder, it was adding sounds to the background, you can find the issue <a href="https://github.com/dylan-power/dinosaur-exploder/issues/40"><u>here</u></a>. It was about adding sounds to the game. At first, I thought of using the FXGL.play() method because that’s how the sounds were implemented up until that point but the problem was that it doesn’t have a way to stop when you want to change views. Because I wanted to add a background sound for the home screen and pause it when you start the game so you could hear another background sound for the play screen. </p>
+      <p>After some investigation, I finally realized that I needed to use the MediaPlayer and Media class from JavaFX, I got stuck here for a bit because some tutorial videos used methods that weren’t accessible, and I was trying to find if there was a method with the same functionality, I figured they only changed the name of the method. I was able to find it, and it worked fine. However, when trying to use the same approach for the background sound of the play screen I discovered that the sound effects of the game that used the FXGL.play() method would pause the play screen’s sound. I had to use FXGL.play() to solve this issue because through more research I found that this was an issue that didn’t have a solution (At least not one I found).  </p>
+      <p>I did my PR after everything seemed ok, but had an issue while submitting it. One of the maintainers had updated the idea folder (but I didn’t know that) and thought I had deleted the files accidentally. I learned some ways to get files back that you delete when doing PR which I think are very important to know so I don’t panic if I actually delete something by mistake and I can restore the changes.  </p>
+    </article>
+  </body>
+</html>
